@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Methods}{2}
+\contentsline {subsection}{\numberline {2.1}Identifying Drugs with Disproportionate Sex Associations}{2}
+\contentsline {subsection}{\numberline {2.2}Quantifying Risk Factors}{2}
+\contentsline {paragraph}{Determining Severity}{2}
+\contentsline {paragraph}{Determining Frequency}{2}
+\contentsline {paragraph}{Adjusting for Sex Bias of Adverse Events}{3}
+\contentsline {subsection}{\numberline {2.3}Deriving Composite Drug Risk Scores}{4}
+\contentsline {subsection}{\numberline {2.4}Validation}{4}
+\contentsline {section}{\numberline {3}Results}{6}
+\contentsline {section}{\numberline {4}Discussion}{9}

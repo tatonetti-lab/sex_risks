@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Draft.aux
+The style file: abbrv.bst
+Database file #1: Bibliography.bib
+Warning--empty journal in stabile_gender_2014
+You've used 22 entries,
+            2118 wiz_defined-function locations,
+            634 strings with 8722 characters,
+and the built_in function-call counts, 8753 in all, are:
+= -- 847
+> -- 517
+< -- 2
++ -- 206
+- -- 182
+* -- 756
+:= -- 1478
+add.period$ -- 66
+call.type$ -- 22
+change.case$ -- 157
+chr.to.int$ -- 0
+cite$ -- 23
+duplicate$ -- 277
+empty$ -- 572
+format.name$ -- 182
+if$ -- 1744
+int.to.chr$ -- 0
+int.to.str$ -- 22
+missing$ -- 22
+newline$ -- 113
+num.names$ -- 44
+pop$ -- 121
+preamble$ -- 1
+purify$ -- 135
+quote$ -- 0
+skip$ -- 206
+stack$ -- 0
+substring$ -- 563
+swap$ -- 57
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 88
+warning$ -- 1
+while$ -- 80
+width$ -- 24
+write$ -- 243
+(There was 1 warning)
