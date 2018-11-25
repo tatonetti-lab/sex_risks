@@ -5,9 +5,9 @@
 **/Other Notebooks
 **/Data
 *.pages
-*TODO.rtf
-*TO DO.rtf
+*TO*DO.rtf
 **/Results & Updates
+*.feather
 
 # Compiled source #
 ###################
