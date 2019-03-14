@@ -1,0 +1,9 @@
+-1.6097614601037884
+
+Highest Risks to Females: 
+1  Alopecia  0.078872  133280
+
+Highest Risks to Male: 
+1  First.Degree.Atrioventricular.Block -0.716588  314379
+2          Acute.Myocardial.Infarction -0.598755  312327
+3                    Cardiogenic.Shock -0.373291  198571

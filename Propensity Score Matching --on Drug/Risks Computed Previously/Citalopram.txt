@@ -1,0 +1,12 @@
+-3.0064986062293038
+
+Highest Risks to Females: 
+1    Disorder.Of.Gallbladder  0.045959   192353
+2  Injection.Site.Hemorrhage  0.038759  4316205
+
+Highest Risks to Male: 
+1  Duodenal.Ulcer.With.Perforation -0.544472  4229614
+2             St.Segment.Elevation -0.478613  4295129
+3             Oxygen.Supply.Absent -0.331825   313601
+4   Neuroleptic.Malignant.Syndrome -0.298853   379802
+5                     Pericarditis -0.292548  4138837

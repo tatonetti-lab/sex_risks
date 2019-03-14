@@ -1,15 +1,13 @@
 # Files & Folders #
 ###################
+**/Archive
+**/Data
 **/Draft_NGedits.pdf
 **/LATEX
-**/Other Notebooks
-**/Data
+**/*TO*DO.rtf
+**alias*
 *.pages
-*TO*DO.rtf
-**/Results & Updates
 *.feather
-*PSM/Jupyter PSM
-
 
 # Compiled source #
 ###################

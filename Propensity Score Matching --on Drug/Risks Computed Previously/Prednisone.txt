@@ -1,0 +1,13 @@
+-2.199940264367166
+
+Highest Risks to Females: 
+1  Infectious.Disorder.Of.Kidney  0.286029   192964
+2                  Heavy.Feeling  0.050456  4060217
+3             Sjogren'S.Syndrome  0.011860   254443
+
+Highest Risks to Male: 
+1                               Cachexia -0.461146   134765
+2  Chronic.Rejection.Of.Renal.Transplant -0.415163  4128372
+3            Peripheral.Motor.Neuropathy -0.396122  4319472
+4                      Tumor.Progression -0.379191  4168352
+5             Inflammatory.Bowel.Disease -0.270083  4074815
