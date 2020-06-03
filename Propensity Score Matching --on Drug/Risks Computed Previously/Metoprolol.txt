@@ -1,9 +1,0 @@
--0.16677980292249867
-
-Highest Risks to Females: 
-1  Disorder.Of.Thyroid.Gland  0.075171   141253
-2      Abnormal.Hair.Texture  0.047987  4197451
-
-Highest Risks to Male: 
-1                   Cardiac.Tamponade -0.219821  318450
-2  Malignant.Tumor.Of.Urinary.Bladder -0.070116  197508
