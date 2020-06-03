@@ -1,4 +1,4 @@
-# AwareDX: Using Machine Learning to identify drugs posing increased risk of adverse reactions to women
+# AwareDX: Using machine learning to identify drugs posing increased risk of adverse reactions to women
 
 ### Summary
 
