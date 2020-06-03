@@ -1,11 +1,10 @@
-# Drugs with Sex-Linked Risks of ADRs
+# AwareDX: Using Machine Learning to identify drugs posing increased risk of adverse reactions to women
 
-### Version 1.0
+### Summary
 
-This research investigation identified drugs associated with disproportionately worse ADRs in either sex (male or female). A standardized version of the FDA's Adverse Event Reporting System was used in conjuction with crowdsourced rankings of ADR severity to calculate sex-specific drug risks based on ADR severity and frequency. The research is detailed in an initial paper entitled, "Drugs with Sex-Linked Risk of ADRs". The Supplementary Materials provide all the relevant data tables and figures. Additionally, our results can be reproduced using code from the Jupyter Notebook. 
+Adverse drug reactions (ADRs) are the fourth leading cause of death in the US. Although women take longer to metabolize medications and experience twice the risk of developing ADRs compared to men, these sex differences are not comprehensively understood. Real-world clinical data provides an opportunity to estimate safety effects in otherwise understudied populations, ie. women. These data, however, are subject to confounding biases and correlated covariates. We present AwareDX, a pharmacovigilance algorithm that leverages advances in machine learning to study sex risks. Our algorithm mitigates these biases and quantifies the differential risk of a drug causing an adverse event in either men or women. We present a resource of 20,817 adverse drug effects posing sex specific risks. We independently validated our algorithm against known pharmacogenetic mechanisms of genes that are sex-differentially expressed. AwareDX presents an opportunity to minimize adverse events by tailoring drug prescription and dosage to sex.
 
-### In the Pipeline
+### Code
 
-- [ ] Correct for covariates (age, polypharmacy) with Propensity Score Matching
-- [ ] Re-evaluate AEOLUS cases/controls identified with PSM
-- [ ] Validate results with Electronic Health Records at CUMC
+- [ ] To analyse results: 
+- [ ] To recreate AwareDX: 
