@@ -1,43 +1,52 @@
 from collections import defaultdict
 import numpy as np
-import pandas as pd 
-import feather 
+import pandas as pd
+import pyarrow.feather as feather
 
 from utils import Utils
 from database import Database
 
-u = Utils()
-db = Database('Mimir from Munnin')
-np.random.seed(u.RANDOM_STATE)
 
-# Check progress 
+def make_results():
 
-progress = defaultdict(int)
-complete = []
+    u = Utils()
+    db = Database('Mimir from Munnin')
+    np.random.seed(u.RANDOM_STATE)
 
-drugs = u.load_np('drugs')
+    # Check progress
 
-for drugID in drugs: 
-    s = u.read_status(drugID)
-    if s == 'yes': 
-        complete.append(drugID)
-    progress[s] += 1
+    progress = defaultdict(int)
+    complete = []
 
-for key in progress: 
-    percentage = round((progress[key]/len(drugs))*100, 1)
-    print(key, "\t", percentage, "%")   
-    
-# Compile results 
+    drugs = u.load_np('drugs')
 
-res = []
-for drugID in complete: 
-    r = u.load_df('Results/'+str(drugID))
-    res.append(r)   
-assert len(complete) == len(res)
+    for drugID in drugs:
+        s = u.read_status(drugID)
+        if s == 'yes':
+            complete.append(drugID)
+        progress[s] += 1
 
-results = pd.concat(res, ignore_index=True)
-assert (results.shape[0] / (25 * len(complete))) == len(u.load_np('adr'))
-u.save_df(results, 'results')
+    for key in progress:
+        percentage = round((progress[key] / len(drugs)) * 100, 1)
+        print(key, "\t", percentage, "%")
 
-print("no of drugs: ", len( u.load_np('drugs')))
-print("No of drug-adr pairs tested: ",results.get(['drug','adr']).drop_duplicates().shape[0])
+    # Compile results
+
+    res = []
+    for drugID in complete:
+        r = u.load_df('Results/' + str(drugID))
+        res.append(r)
+    assert len(complete) == len(res)
+
+    results = pd.concat(res, ignore_index=True)
+
+    # assert (results.shape[0] / (25 * len(complete))) == len(u.load_np('adr'))
+    u.save_df(results, 'results')
+
+    print("no of drugs: ", len(u.load_np('drugs')))
+    print("No of drug-adr pairs tested: ",
+          results.get(['drug', 'adr']).drop_duplicates().shape[0])
+
+
+if __name__ == '__main__':
+    make_results()

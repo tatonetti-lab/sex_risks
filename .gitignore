@@ -1,7 +1,6 @@
 # Files & Folders #
 ###################
 **/Archive
-config.ini
 
 # Compiled source #
 ###################
@@ -104,3 +103,16 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# config
+config.ini
+config_awaredx.ini
+*.ini
+
+#Data
+Data/Results/*
+Data/PSM_features/*
+Data/PSM_models/*
+Data/Status/*
+Data/*.feather
+Data/*.npy

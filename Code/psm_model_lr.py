@@ -29,7 +29,7 @@ drugs = u.load_np('drugs')
 
 drug_features = []
 for i, drugID in enumerate(drugs): 
-    f = u.load_feature(str(i))
+    f = u.load_feature(drugID)
     drug_features.append(f)
     
 age_feature = coo_matrix(df_patients.get('Age').values.reshape(u.NUM_PATIENTS, 1))
