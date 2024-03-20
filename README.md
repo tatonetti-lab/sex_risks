@@ -9,23 +9,55 @@ Adverse drug reactions (ADRs) are the fourth leading cause of death in the US. A
 To be able to run this project, it is necessary access to two databases, OpenFDA and AWAREdx.
 
 #### OpenFDA
+OpenFDA tables are created using the following repository https://github.com/ngiangre/openFDA_drug_event_parsing.
+- drugcharacteristics
 - drugs
 - drugs_atc
-- report
 - patient
+- reactions
+- report
+- report_serious
+- reporter
+- standard_drugs
+- standard_drugs_atc: in order to create this table it is necessary an extra mapping from RxNorm - atc
+- standard_drugs_rxnorm_ingredients
+- standard_reactions
+- standard_reactions_meddra_hlgt
+- standard_reactions_meddra_hlt
+- standard_reactions_meddra_relationships
+- standard_reactions_meddra_soc
+- standard_reactions_snomed
+
 
 #### AWAREdx
+This tables are subsets from the OpenFDA database combined with additional information like CONCEP table from OMOP data structure. atc 4and 5 are extracted from CONCEPT table.
 - atc_4_name
+- - atc_5_id (concept_id)
+  - atc_name
 - atc_5_name
-- atc_4_name
+- - atc_5_id (concept_id)
+  - atc_name
 - atc_5_patient
-- atc_5_patient_psm
+- - PID (safetyreportid)
+  - atc_5_id
 - pt_patient
+- - PID
+  - meddra_concept_id
 - pt_name
+- - meddra_concept_id
+  - meddra_concept_name
 - hglt_patient
+- - PID
+  - meddra_concept_id
 - hlgt_name
+- - meddra_concept_id
+  - meddra_concept_name
 - soc_patient
+- - PID
+  - meddra_concept_id
 - soc_name
+- - meddra_concept_id
+  - meddra_concept_name
 
 ### Other requirements
 
