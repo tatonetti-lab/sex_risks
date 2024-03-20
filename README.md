@@ -32,31 +32,31 @@ OpenFDA tables are created using the following repository https://github.com/ngi
 #### AWAREdx
 This tables are subsets from the OpenFDA database combined with additional information like CONCEP table from OMOP data structure. atc 4and 5 are extracted from CONCEPT table.
 - atc_4_name
-- - atc_5_id (concept_id)
+  - atc_5_id (concept_id)
   - atc_name
 - atc_5_name
-- - atc_5_id (concept_id)
+  - atc_5_id (concept_id)
   - atc_name
 - atc_5_patient
-- - PID (safetyreportid)
+  - PID (safetyreportid)
   - atc_5_id
 - pt_patient
-- - PID
+  - PID
   - meddra_concept_id
 - pt_name
-- - meddra_concept_id
+  - meddra_concept_id
   - meddra_concept_name
 - hglt_patient
-- - PID
+  - PID
   - meddra_concept_id
 - hlgt_name
-- - meddra_concept_id
+  - meddra_concept_id
   - meddra_concept_name
 - soc_patient
-- - PID
+  - PID
   - meddra_concept_id
 - soc_name
-- - meddra_concept_id
+  - meddra_concept_id
   - meddra_concept_name
 
 ### Other requirements
