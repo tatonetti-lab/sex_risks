@@ -40,6 +40,9 @@ This tables are subsets from the OpenFDA database combined with additional infor
 - atc_5_patient
   - PID (safetyreportid)
   - atc_5_id
+- atc_5_patient_psm: this table includes atc_5_patient and adds all the PIDs that do not match to atc5(mapping it to 0), making a table with all PIDS for psm.
+  - PID (safetyreportid)
+  - atc_5_id
 - pt_patient
   - PID
   - meddra_concept_id
