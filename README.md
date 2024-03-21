@@ -9,7 +9,7 @@ Adverse drug reactions (ADRs) are the fourth leading cause of death in the US. A
 To be able to run this project, it is necessary access to two databases, OpenFDA and AWAREdx.
 
 #### OpenFDA
-OpenFDA tables are created using the following repository https://github.com/ngiangre/openFDA_drug_event_parsing.
+OpenFDA tables are created using the following repository [ngiangre/openFDA_drug_event_parsing](https://github.com/ngiangre/openFDA_drug_event_parsing).
 - drugcharacteristics
 - drugs
 - drugs_atc
@@ -19,7 +19,7 @@ OpenFDA tables are created using the following repository https://github.com/ngi
 - report_serious
 - reporter
 - standard_drugs
-- standard_drugs_atc: in order to create this table it is necessary an extra mapping from RxNorm - atc
+- standard_drugs_atc: in order to create this table it is necessary an extra mapping from RxNorm - atc, not present in the aforementioned repository
 - standard_drugs_rxnorm_ingredients
 - standard_reactions
 - standard_reactions_meddra_hlgt
@@ -30,41 +30,41 @@ OpenFDA tables are created using the following repository https://github.com/ngi
 
 
 #### AWAREdx
-This tables are subsets from the OpenFDA database combined with additional information like CONCEP table from OMOP data structure. atc 4and 5 are extracted from CONCEPT table.
+This tables are subsets from the OpenFDA database combined with additional information like CONCEP table from OMOP data structure. atc 4 and 5 are extracted from CONCEPT table.
 - atc_4_name
   - atc_5_id (concept_id)
   - atc_name
 - atc_5_name
   - atc_5_id (concept_id)
   - atc_name
-- atc_5_patient
+- atc_5_patient: extracted from standard_drugs_atc
   - PID (safetyreportid)
   - atc_5_id
 - atc_5_patient_psm: this table includes atc_5_patient and adds all the PIDs that do not match to atc5(mapping it to 0), making a table with all PIDS for psm.
   - PID (safetyreportid)
   - atc_5_id
-- pt_patient
+- pt_patient: extracted from standard_reactions
   - PID
   - meddra_concept_id
-- pt_name
+- pt_name: extracted from standard_reactions 
   - meddra_concept_id
   - meddra_concept_name
-- hglt_patient
+- hglt_patient: extracted from standard_reactions_meddra_hlgt
   - PID
   - meddra_concept_id
-- hlgt_name
+- hlgt_name: extracted from standard_reactions_meddra_hlgt
   - meddra_concept_id
   - meddra_concept_name
-- soc_patient
+- soc_patient: extracted from reactions_meddra soc
   - PID
   - meddra_concept_id
-- soc_name
+- soc_name: extracted from reactions_meddra soc
   - meddra_concept_id
   - meddra_concept_name
 
 ### Other requirements
 
-It is necessary to have access to the following OMOP concept tables stores as CSV:
+It is necessary to have access to the following OMOP concept tables stored as CSV:
 - CONCEPT
 - CONCEPT_ANCESTOR
 - CONCEPT_RELATIONSHIP
