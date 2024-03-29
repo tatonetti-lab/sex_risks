@@ -80,10 +80,7 @@ class Drug:
 
     def match(self, cal=0.01, bins=100, minRecPerBin=0.005):
         allFemales = self.pscores.copy(deep=True).query('Sex=="F"')
-        print('allF '+ len(allFemales))
-
         allMales = self.pscores.copy(deep=True).query('Sex=="M"')
-        print('allM '+ len(allMales))
 
         if (len(allFemales) < 250) or (len(allMales) < 250):
             # print(len(allFemales), "females")
