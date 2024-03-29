@@ -33,13 +33,13 @@ def make_features(drugID):
     q = f"""
         SELECT 
             COUNT(CASE WHEN atc_5_id = {drugID} THEN 1 END) AS drug
-        FROM """+MYSQL_DB_ADX+""".atc_5_patient ps
+        FROM """+MYSQL_DB_ADX+""".atc_5_patient_psm psm
         JOIN """+MYSQL_DB_FDA+""".patient p
-            ON ps.PID = p.safetyreportid
+            ON psm.PID = p.safetyreportid
         WHERE (p.patient_sex='Female' OR p.patient_sex='Male')
             AND p.patient_custom_master_age BETWEEN 18 AND 85
-        GROUP BY ps.PID
-        ORDER BY ps.PID
+        GROUP BY psm.PID
+        ORDER BY psm.PID
     """
 
     # q = 'select count(case when atc_5_id = ' + str(
@@ -56,7 +56,7 @@ def make_features_mp():
 
     drugs = u.load_np('drugs')
 
-    process_map(make_features, drugs, max_workers=20)
+    process_map(make_features, drugs, max_workers=10)
 
 
 if __name__ == '__main__':

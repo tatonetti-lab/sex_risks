@@ -44,13 +44,10 @@ def run_rf_model():
     num_drugs_feature = coo_matrix(hstack(drug_features).sum(1))
 
     features = []
-   
-
     features.append(age_feature.astype(float))
     features.append(num_drugs_feature.astype(float))
     features.extend(drug_features)
     
-
     X = hstack(features, dtype=float)
     # y = u.load_feature('label').toarray().reshape(-1)
 
@@ -71,8 +68,8 @@ def run_rf_model():
         'classifier__max_depth': [5, 7, 9],
         'classifier__criterion': ['gini', 'entropy']
     }
-
-    CV = GridSearchCV(model, param_grid, n_jobs=30)
+    
+    CV = GridSearchCV(model, param_grid, n_jobs=30, verbose=1)
 
     print('Fitting model')
 

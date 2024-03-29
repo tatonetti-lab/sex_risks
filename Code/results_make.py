@@ -10,7 +10,6 @@ from database import Database
 def make_results():
 
     u = Utils()
-    db = Database('Mimir from Munnin')
     np.random.seed(u.RANDOM_STATE)
 
     # Check progress

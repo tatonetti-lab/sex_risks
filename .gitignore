@@ -116,3 +116,12 @@ Data/PSM_models/*
 Data/Status/*
 Data/*.feather
 Data/*.npy
+Data_0/*
+
+CONCEPT.csv
+CONCEPT_ANCESTOR.csv
+CONCEPT_RELATIONSHIP.csv
+FAERS_ADE_Severity.csv
+
+top_adrs_with_concepts_ids.csv
+top_drugs_with_concepts_ids.csv

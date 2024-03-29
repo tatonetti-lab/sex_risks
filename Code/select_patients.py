@@ -1,10 +1,15 @@
 from utils import Utils
 from database import Database
 import pandas as pd
-import numpy as np
+
+import configparser
+config = configparser.ConfigParser()
+config.read('config.ini')
 
 u = Utils()
-db = Database('openfda')
+db = Database('awaredx')
+
+MYSQL_DB_FDA = config['DATABASE']['mysql_db_openfda']
 
 
 def fetch_patients(date_filter=None, age_filter=85):
@@ -19,8 +24,8 @@ def fetch_patients(date_filter=None, age_filter=85):
         SELECT pa.safetyreportid as PID
         , LEFT(pa.patient_sex, 1) as Sex
         , pa.patient_custom_master_age as Age
-        FROM effect_openfda_19q2.patient  pa
-        LEFT JOIN effect_openfda_19q2.report re 
+        FROM """+MYSQL_DB_FDA+""".patient  pa
+        LEFT JOIN effect_openfda_2023q4.report re 
         ON pa.safetyreportid = re.safetyreportid
         WHERE (pa.patient_sex='Female' OR pa.patient_sex='Male')
         AND pa.patient_custom_master_age BETWEEN 18 AND @age_filter
@@ -30,10 +35,12 @@ def fetch_patients(date_filter=None, age_filter=85):
             SELECT safetyreportid as PID
             , LEFT(patient_sex, 1) as Sex
             , patient_custom_master_age as Age
-            FROM effect_openfda_19q2.patient 
+            FROM """+MYSQL_DB_FDA+""".patient 
             WHERE (patient_sex='Female' OR patient_sex='Male')
             AND patient_custom_master_age BETWEEN 18 AND """ + str(age_filter)
     
+    print(q_patients_w_sex)
+
     res_patients_w_sex = db.run_query(q_patients_w_sex)
 
     # make dataframe

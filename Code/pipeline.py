@@ -9,16 +9,16 @@ from important_sex_biased_adr import filter_sex_risks
 
 if __name__ == '__main__':
     print("Fetching patients")
-    fetch_patients()
+    #fetch_patients()
 
     print("Make features")
-    make_features_mp()
+    #make_features_mp()
 
     print("Running propensity score matching")
-    run_rf_model()
+    #run_rf_model()
 
     print("Calculate propensity scores")
-    calculate_propensity_scores()
+    #calculate_propensity_scores()
 
     print("Run analysis")
     run_analysis_mp()
@@ -27,7 +27,7 @@ if __name__ == '__main__':
     make_results()
 
     print("Compiling results")
-    compile_results() #checked
+    compile_results() 
 
     print("Filtering sex risks")
-    filter_sex_risks() #checked
+    filter_sex_risks() 

@@ -37,12 +37,22 @@ def run_analysis(drugID):
 
         #print('Iterating and matching')
         for itr in range(1, ITERATIONS + 1):
+            print('hello')
             drug.match()
+            print('matched')
             drug.count_adr()
+            print('count')
             drug.assign_abcd(itr)
             drug.do_chi_square()
             drug.calc_logROR()
+            print('iteration' + str(itr))
+            print(drug.match_f )
+            print(drug.match_m )
+
+            print(drug.XF )
+            print(drug.XM )
             drug.reset_for_next_itr()
+
 
         #print('Saving results')
         x = drug.save_results(ITERATIONS)
@@ -61,9 +71,10 @@ def run_analysis(drugID):
 def run_analysis_mp():
     print('Loading drugs')
     drugs = u.load_np('drugs')
-    # for drug in drugs:
-    #      run_analysis(drug)
-    process_map(run_analysis, drugs, max_workers=35)
+    print()
+    for drug in drugs:
+         run_analysis(drug)
+    # process_map(run_analysis, drugs, max_workers=50)
 
 
 if __name__ == "__main__":
